@@ -3,8 +3,15 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="scripts/require.js"></script>
   </head>
   <body>
+    <script>
+        require.config({
+            baseUrl: "/scripts"
+        });
+    </script>
+    {{{block "pageScripts"}}}
     {{{body}}}
   </body>
 </html>
