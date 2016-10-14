@@ -1,3 +1,15 @@
 define('user', function() {
-  return 'this is user module';
+  var CommentBox = React.createClass({
+    displayName: 'CommentBox',
+    render: function() {
+      return (
+        React.createElement('div', {
+            className: "commentBox"
+          },
+          "Hello, world! I am a CommentBox."
+        )
+      );
+    }
+  });
+  return CommentBox;
 });

@@ -6,6 +6,7 @@ var hbs = require('express-hbs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var modules = require('./routes/modules');
 
 var app = express();
 
@@ -20,6 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+app.use('/modules', modules);
 app.use('/user', users);
 
 module.exports = app;

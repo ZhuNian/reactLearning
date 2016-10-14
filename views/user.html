@@ -1,10 +1,14 @@
 {{#contentFor 'pageScripts'}}
 <script>
-    require(['user'], function(user) {
-        alert(user);
+    require(['user'], function(CommentBox) {
+        ReactDOM.render(
+                React.createElement(CommentBox, null),
+                document.getElementById('content')
+        );
     })
 </script>
 {{/contentFor}}
 
 <h1>{{title}}</h1>
 <p>Welcome {{name}} !</p>
+<div id = 'content'></div>
